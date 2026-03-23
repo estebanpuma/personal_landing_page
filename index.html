@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería de Sistemas Críticos | Portafolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;700;900&display=swap');
+        
+        :root {
+            --color-primary: #3b82f6; /* Azul Eléctrico */
+            --color-bg: #020617;      /* Negro Azulado Muy Profundo */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg);
+            color: #f1f5f9;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .blue-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+        }
+
+        .card-expert {
+            background: #0f172a;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-expert:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #60a5fa, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+
+        /* Ocultar scrollbar pero mantener funcionalidad */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-black tracking-tighter mono">
+                Esteban <span class="text-blue-500">Puma</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-slate-400">
+                <a href="#inicio" class="hover:text-blue-500 transition-colors">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-blue-500 transition-colors">Perfil</a>
+                <a href="#experiencia" class="hover:text-blue-500 transition-colors">Experiencia</a>
+                <a href="#contacto" class="hover:text-blue-600 transition-colors text-blue-500">Contacto</a>
+            </div>
+            <div class="md:hidden text-blue-500">
+                <i class="fas fa-bars text-2xl"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-20">
+        <div class="max-w-4xl">
+            
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-none">
+                Soy ingeniero y hago <br>
+                <span class="gradient-text-blue">cosas de ingeniero.</span>
+            </h1>
+            <p class="text-xl md:text-3xl text-slate-400 font-light mb-12 max-w-3xl mx-auto">
+                Usualmente funcionan.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#sobre-mi" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded font-bold transition-all blue-glow text-center">
+                    Sobre mí
+                </a>
+                <a href="#contacto" class="border border-slate-700 hover:border-blue-500 text-slate-300 px-10 py-4 rounded font-bold transition-all text-center">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí con espacio para Foto -->
+    <section id="sobre-mi" class="py-32 bg-slate-950/50 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Espacio para la foto -->
+                <div class="relative order-2 md:order-1">
+                    <div class="absolute -inset-4 border border-blue-500/20 rounded-lg"></div>
+                    <div class="bg-slate-900 rounded-lg overflow-hidden blue-glow profile-mask h-[500px] flex items-center justify-center border border-slate-800">
+                        <!-- Placeholder para tu foto real -->
+                        <div class="text-center p-8">
+                            <i class="fas fa-user-gear text-6xl text-slate-700 mb-4"></i>
+                        </div>
+                        <img src="tu-foto.jpg" alt="Ingeniero en campo" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"> 
+                    </div>
+                    <div class="absolute bottom-6 left-6 bg-blue-600 px-4 py-2 rounded text-xs font-black mono uppercase">
+                        Turbina Francis. Genera la energía necesaria para que te conectes y veas esto.
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2 space-y-8">
+                    <div>
+                        <h2 class="text-4xl font-black mb-2 uppercase tracking-tighter italic text-blue-500">Sobre mí</h2>
+                        <div class="h-1 w-20 bg-blue-600"></div>
+                    </div>
+                    <div class="space-y-6 text-lg text-slate-400 leading-relaxed">
+                        <p>
+                            <span class="text-blue-400">Me dedico a resolver problemas</span>. A menudo soy yo quien los detecta (o los provoca al intentar optimizarlos). Mi experiencia en operación energética me ha enseñado que existen sistemas críticos que no deben fallar; y si fallan, hay que restablecerlos de inmediato.
+                        </p>
+                        <p>
+                            Como <span class="text-blue-400">Ingeniero Industrial</span> con una maestría en <span class="text-blue-400">Sistemas Integrados de Gestión (SIG)</span>, mi base son los procesos, los sistemas y la seguridad laboral, pero mi motor es la innovación.
+                        </p>    
+                        <p>
+                            Creo que una organización solo es tan fuerte como su eslabón más débil, ya sea un protocolo de seguridad mal ejecutado o un proceso manual que debería ser automatizado. Mi enfoque no se detiene en el cumplimiento normativo; utilizo la tecnología y los sistemas para eliminar el caos y avanzar hacia la mejora continua.
+                        </p>
+                        <p>
+                            <span class="text-blue-400">Mi objetivo es simple:</span> transformar la cultura y los procesos de las organizaciones en sistemas eficientes y útiles.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="border-l-2 border-blue-500 pl-4">
+                            <p class="text-2xl font-bold text-white italic">+7</p>
+                            <p class="text-xs uppercase text-slate-500 mono">Años de experiencia</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Destacada -->
+    <section id="experiencia" class="py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-black mb-16 text-center uppercase tracking-widest">Experiencia</h2>
+            
+            <div class="grid gap-8">
+                <!-- Hidrotambo -->
+                <div class="card-expert p-8 rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="fas fa-water text-6xl"></i>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Hidrotambo S.A.</h3>
+                            <p class="text-blue-500 mono text-sm">Operaciones</p>
+                        </div>
+                        <span class="bg-blue-500/10 text-blue-500 px-4 py-1 rounded-full text-xs font-bold uppercase mt-2 md:mt-0">Actualidad</span>
+                    </div>
+                    <p class="text-slate-400 mb-6 italic">"Liderazgo en campo para la continuidad energética."</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded text-xs">Hidroeléctrica</span>
+                        <span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded text-xs">Mantenimiento Crítico</span>
+                        <span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded text-xs">SST en Campo</span>
+                    </div>
+                </div>
+
+                <!-- SSEI -->
+                <div class="card-expert p-8 rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="fas fa-bolt text-6xl"></i>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">SSEI</h3>
+                            <p class="text-blue-400 mono text-sm">Supervisor de Seguridad (SST)</p>
+                        </div>
+                        <span class="text-slate-500 text-xs font-mono uppercase">Alta Tensión</span>
+                    </div>
+                    <p class="text-slate-400 mb-6 text-sm">Intervención en transformadores de potencia y subestaciones eléctricas. Supervisión directa donde la seguridad es la diferencia entre el éxito y el desastre.</p>
+                </div>
+
+                <!-- PlanHofa -->
+                <div class="card-expert p-8 rounded-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">PlanHofa</h3>
+                            <p class="text-blue-400 mono text-sm">Sistema de Gestión SST</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 mb-6 text-sm">Diseño y desarrollo de la estructura de procesos y línea base para seguridad laboral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech & Skills -->
+    <section id="stack" class="py-32 bg-slate-950/80">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div>
+                <h3 class="text-xl font-bold mb-8 flex items-center gap-4 uppercase tracking-tighter">
+                    <span class="w-8 h-[2px] bg-blue-500"></span> Ingeniería Industrial
+                </h3>
+                <div class="space-y-6">
+                    <div class="group">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm font-bold uppercase text-slate-300">Gestión de Operaciones</span>
+                            <span class="text-blue-500 mono text-xs">95%</span>
+                        </div>
+                        <div class="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-blue-600 h-full w-[95%] transition-all group-hover:bg-blue-400"></div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm font-bold uppercase text-slate-300">SST </span>
+                            <span class="text-blue-500 mono text-xs">98%</span>
+                        </div>
+                        <div class="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-blue-600 h-full w-[98%] transition-all group-hover:bg-blue-400"></div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm font-bold uppercase text-slate-300">Optimización / Automatización</span>
+                            <span class="text-blue-500 mono text-xs">90%</span>
+                        </div>
+                        <div class="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-blue-600 h-full w-[90%] transition-all group-hover:bg-blue-400"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-8 flex items-center gap-4 uppercase tracking-tighter">
+                    <span class="w-8 h-[2px] bg-blue-500"></span> Software Stack
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 border border-slate-800 rounded bg-slate-900/50 flex items-center gap-3">
+                        <i class="fab fa-python text-blue-400"></i>
+                        <span class="text-sm font-mono">Python / Django</span>
+                    </div>
+                    <div class="p-4 border border-slate-800 rounded bg-slate-900/50 flex items-center gap-3">
+                        <i class="fas fa-database text-blue-400"></i>
+                        <span class="text-sm font-mono">PostgreSQL / SQLite</span>
+                    </div>
+                    <div class="p-4 border border-slate-800 rounded bg-slate-900/50 flex items-center gap-3">
+                        <i class="fas fa-code text-blue-400"></i>
+                        <span class="text-sm font-mono">HTMX / Jinja2 / HTML / CSS </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Destacado -->
+    <section id="contacto" class="py-32 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">¿Tienes un problema <br><span class="text-blue-500">que valga la pena resolver?</span></h2>
+            <p class="text-slate-400 mb-12 text-lg">
+                Hablemos de mejora continua, automatización o SST. Sin adornos, directo al grano.
+            </p>
+            
+            <div class="grid gap-6 text-left">
+                <a href="mailto:contacto@estebanpuma.com" class="group flex items-center justify-between p-6 border border-slate-800 hover:border-blue-500 bg-slate-950 transition-all rounded-lg">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded text-blue-500">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase text-slate-500 font-bold mono">Email Corporativo</p>
+                            <p class="text-lg font-bold text-slate-200">contacto@estebanpuma.com</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right text-slate-700 group-hover:text-blue-500 group-hover:translate-x-2 transition-all"></i>
+                </a>
+
+                <div class="flex justify-center gap-12 pt-8">
+                    <a href="#" class="text-slate-500 hover:text-blue-500 text-3xl transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-slate-500 hover:text-blue-500 text-3xl transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <button onclick="copyToClipboard('contacto@estebanpuma.com')" class="text-slate-500 hover:text-blue-500 text-3xl transition-colors">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div id="copyNotice" class="text-blue-500 text-center text-xs mt-4 opacity-0 transition-opacity uppercase font-bold mono">Email copiado al portapapeles</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="py-12 border-t border-slate-900 text-center">
+        <p class="text-slate-600 text-xs mono uppercase tracking-widest">
+            "Un camino de mil millas inicia con el primer paso" — <span class="text-slate-500 font-bold">REBUILDING SYSTEMS</span>
+        </p>
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            const notice = document.getElementById('copyNotice');
+            notice.style.opacity = '1';
+            setTimeout(() => { notice.style.opacity = '0'; }, 2000);
+        }
+
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.style.height = '70px';
+                nav.style.backgroundColor = 'rgba(2, 6, 23, 0.95)';
+            } else {
+                nav.style.height = '80px';
+                nav.style.backgroundColor = 'rgba(2, 6, 23, 0.8)';
+            }
+        };
+    </script>
+</body>
+</html>
